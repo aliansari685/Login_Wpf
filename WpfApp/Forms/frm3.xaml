@@ -1,0 +1,164 @@
+﻿<Window x:Class="WpfApp.Forms.frm3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        mc:Ignorable="d"
+    	SizeToContent="WidthAndHeight"
+	    WindowStartupLocation="CenterScreen"
+	    WindowStyle="None"
+        AllowsTransparency="True"
+	    ResizeMode="NoResize" BorderThickness="1" materialDesign:ShadowAssist.ShadowEdges="All" materialDesign:ShadowAssist.ShadowDepth="Depth5" materialDesign:ShadowAssist.Darken="True">
+
+    <materialDesign:Card
+        x:Name="window"
+		TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource PrimaryHueLightBrush}" >
+
+        <GroupBox materialDesign:ElevationAssist.Elevation="Dp12" Background="{DynamicResource MaterialDesignPaper}" Header="Please Fill Information" Width="340" Margin="20,20,20,20">
+
+            <StackPanel Width="300" >
+                <!--Firstname-->
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox BorderBrush="Blue" Height="40" FontSize="13" x:Name="Firstname_Box" Grid.Column="1" materialDesign:TextFieldAssist.HasClearButton="True" 
+                     Style="{DynamicResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="First Name" />
+                    <materialDesign:PackIcon Foreground="{Binding ElementName=Firstname_Box, Path=Foreground}"
+                                         Kind="User" Margin="0,20,5,0"/>
+                </Grid>
+                <!--Firstname-->
+
+
+                <!--Lastname-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox BorderBrush="Blue" FontSize="13" Height="40" x:Name="Lastname_Box" Grid.Column="1" materialDesign:TextFieldAssist.HasClearButton="True" 
+                     Style="{DynamicResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Last Name" Margin="0,5,0,0"/>
+                    <materialDesign:PackIcon Foreground="{Binding ElementName=Lastname_Box, Path=Foreground}"
+                                         Kind="UserCardDetailsOutline" Margin="0,23,5,0"/>
+                </Grid>
+                <!--Lastname-->
+
+
+                <!--Username-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox BorderBrush="Blue" Margin="0,5,0,0" FontSize="13" Height="40" x:Name="Username_Box" Grid.Column="1" materialDesign:TextFieldAssist.HasClearButton="True" 
+                     Style="{DynamicResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="UserName"/>
+                    <materialDesign:PackIcon Foreground="{Binding ElementName=Username_Box, Path=Foreground}"
+                                         Kind="UserCheck" Margin="0,23,5,0"/>
+                </Grid>
+                <!--Username-->
+
+
+                <!--Mail-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox BorderBrush="Blue" Margin="0,5,0,0" FontSize="13" Height="40" x:Name="Mail_Box" Grid.Column="1" materialDesign:TextFieldAssist.HasClearButton="True" 
+                     Style="{DynamicResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="E-Mail"/>
+                    <materialDesign:PackIcon Foreground="{Binding ElementName=Mail_Box, Path=Foreground}"
+                                         Kind="Gmail" Margin="0,23 ,5,0"/>
+                </Grid>
+                <!--Mail-->
+
+
+                <!--PasswordBox-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <PasswordBox BorderBrush="Blue" Margin="0,5,0,0" FontSize="13" Height="40" x:Name="Password_Box" Grid.Column="1" materialDesign:TextFieldAssist.HasClearButton="True" 
+                     Style="{DynamicResource MaterialDesignFloatingHintRevealPasswordBox}" materialDesign:HintAssist.Hint="Password" />
+                    <materialDesign:PackIcon Foreground="{Binding ElementName=Password_Box, Path=Foreground}"
+                                         Kind="Password" Margin="0,23,5,0"/>
+                </Grid>
+                <!--PasswordBox-->
+
+
+                <!--Repeat_PasswordBox-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <PasswordBox BorderBrush="Blue" Margin="0,5,0,0" FontSize="13" Height="40" x:Name="Password_Box2" Grid.Column="1" materialDesign:TextFieldAssist.HasClearButton="True" 
+                     Style="{DynamicResource MaterialDesignFloatingHintRevealPasswordBox}" materialDesign:HintAssist.Hint="Password Verified"/>
+                    <materialDesign:PackIcon Foreground="{Binding ElementName=Password_Box2, Path=Foreground}"
+                                         Kind="PasswordVerified" Margin="0,23,5,0"/>
+                </Grid>
+                <!--Repeat_PasswordBox-->
+
+                <!--Persian Datepicker-->
+                <GroupBox materialDesign:ColorZoneAssist.Mode="PrimaryLight" Margin="0,5,0,0" Header="BirthDay :">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <hc:PersianDatePicker x:Name="datepicker1" FontSize="16" HorizontalContentAlignment="Center" SelectedDateFormat="Long" CalendarClosed="datepicker1_CalendarClosed" />
+                    </Grid>
+                </GroupBox>
+                <!--Persian Datepicker-->
+
+
+                <!--RadioButton-->
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <RadioButton x:Name="read_radio" HorizontalAlignment="Right" IsChecked="True" Content="Read" Margin="0,10,10,0"/>
+                    <RadioButton x:Name="write_radio" Grid.Column="1" Margin="0,10,0,0" Content="Write" IsEnabled="False"/>
+                </Grid>
+
+                <!--RadioButton-->
+
+                <!--Buttons:-->
+                <Button
+                IsDefault="True"
+                x:Name="RegisterBTN"
+				Style="{DynamicResource MaterialDesignFlatDarkBgButton}"
+				materialDesign:ShadowAssist.ShadowDepth="Depth3"
+				materialDesign:ButtonAssist.CornerRadius="5"
+				Height="45"
+				Margin="0,10,0,10"
+                Content="Create Account" Click="RegisterBTN_Click"/>
+
+                <!--Cancel:-->
+                <Button
+                x:Name="Closing"
+				Style="{DynamicResource MaterialDesignFlatSecondaryLightButton}"
+				materialDesign:ShadowAssist.ShadowDepth="Depth2"
+				materialDesign:ButtonAssist.CornerRadius="5"
+				Height="45"
+				Grid.Row="4"
+				Grid.Column="1"
+				Content="Cancel" Click="Closing_Click" />
+            </StackPanel>
+
+        </GroupBox>
+
+    </materialDesign:Card>
+
+</Window>

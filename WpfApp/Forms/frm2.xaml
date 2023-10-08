@@ -1,0 +1,144 @@
+﻿<Window x:Class="WpfApp.Forms.frm2" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        SizeToContent="Manual"
+	    WindowStartupLocation="CenterScreen" 
+        WindowState="Maximized"
+	    WindowStyle="SingleBorderWindow"
+        Title="Main" Width="1200" Loaded="Form_Loaded" >
+
+    <materialDesign:Card
+        x:Name="window"
+		TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+		Background="{DynamicResource MaterialDesignPaper}" >
+
+        <!--Sizes-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"  />
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Content-->
+
+            <!--DataGridView-->
+            <DataGrid HorizontalGridLinesBrush="{DynamicResource PrimaryHueDarkBrush}" Background="{DynamicResource PrimaryHueLightBrush}" Foreground="Black"
+                      x:Name="DataView1" MaxColumnWidth="230" d:ItemsSource="{d:SampleData ItemCount=5}"
+                      IsReadOnly="True" HeadersVisibility="All" FontSize="14" GridLinesVisibility="All" 
+                      MouseDoubleClick="DataView1_MouseDoubleClick" IsSynchronizedWithCurrentItem="True">
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDarkForeground}" />
+                                <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+            </DataGrid>
+
+
+            <!--GroupBox-->
+            <GroupBox Padding="0" Grid.Column="1">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <!--GB1-->
+                    <GroupBox Header="Information" >
+                        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0">
+                                <Label  Width="70" Content="Username :"/>
+                                <Label  Width="70" Content="Time :"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <Label Content="" x:Name="lbl_username"/>
+                                <Label Content=" " x:Name="lbl_time"/>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+
+                    <!--GB2-->
+                    <GroupBox Grid.Row="1" Header="Search" >
+                        <Grid  HorizontalAlignment="Center">
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBox Width="200" Name="searchbox" Style="{DynamicResource MaterialDesignOutlinedTextBox}" materialDesign:TextFieldAssist.TextFieldCornerRadius="5" 
+                                     materialDesign:TextFieldAssist.HasClearButton="True" materialDesign:HintAssist.Hint="All Column..." Height="50" TextChanged="Searchbox_TextChanged"/>
+                                <Button IsDefault="True" x:Name="btn_Search" Style="{DynamicResource MaterialDesignRaisedLightButton}" Content="Seach" Margin="0 10 0 0" Height="44" Click="Btn_Search_Click"/>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+
+                    <!--GB3-->
+                    <GroupBox Grid.Row="2" Header="Column Visible" >
+                        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--Col 1-->
+                            <StackPanel Grid.Column="0">
+                                <CheckBox Tag="1" Margin="0,0,0,3" x:Name="checkBox_Row" Content="Row" Click="checkBox_Row_Click" IsChecked="True" />
+                                <CheckBox Tag="2" Margin="0,0,0,3" x:Name="checkBox_First" Content="Firstname" Click="checkBox_Row_Click"  IsChecked="True"/>
+                                <CheckBox Tag="3" x:Name="checkBox_Last" Content="Lastname"  IsChecked="True" Click="checkBox_Row_Click"/>
+                            </StackPanel>
+
+                            <!--Col 2-->
+                            <StackPanel Grid.Column="1">
+                                <CheckBox Tag="4" Margin="0,0,0,3" x:Name="checkBox_User" Content="Username" Click="checkBox_Row_Click"  IsChecked="True"/>
+                                <CheckBox Tag="5" Margin="0,0,0,3" x:Name="checkBox_Mail" Content="Mail" Click="checkBox_Row_Click"  IsChecked="True"/>
+                                <CheckBox Tag="6" x:Name="checkBox_Pass" Content="Password" Click="checkBox_Row_Click" IsChecked="True"/>
+                            </StackPanel>
+
+                            <!--Col 3-->
+                            <StackPanel Grid.Column="2">
+                                <CheckBox Tag="7" Margin="0,0,0,3" x:Name="checkBox_Modify" Content="Modify" Click="checkBox_Row_Click" IsChecked="True"/>
+                                <CheckBox Tag="8" Margin="0,0,0,3" x:Name="checkBox_RegisterDate" Content="RegDate" Click="checkBox_Row_Click" IsChecked="True"/>
+                                <CheckBox Tag="9" x:Name="checkBox_Birth" Content="Birth" Click="checkBox_Row_Click" IsChecked="True"/>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+
+
+                    <!--GB4-->
+                    <GroupBox Grid.Row="3" Header="Actions" >
+                        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Height="Auto" Grid.Column="0">
+                                <Button Name="btn_insert" Style="{DynamicResource MaterialDesignFloatingActionLightButton}"  Content="Insert" Margin="0,0,20,20" Click="btn_insert_Click"/>
+                                <Button Name="btn_delete" Style="{DynamicResource MaterialDesignFloatingActionLightButton}"  Content="Delete" Margin="0,0,20,0" Click="btn_delete_Click"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1">
+                                <Button Name="btn_edit" Style="{DynamicResource MaterialDesignFloatingActionLightButton}" Content="Edit Row" Margin="0,0,0,20" Click="Btn_EditRow_Click"/>
+                                <Button Name="btn_editPass" Style="{DynamicResource MaterialDesignFloatingActionLightButton}" Content="Edit Pass" Click="Btn_editPass_Click"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </GroupBox>
+        </Grid>
+    </materialDesign:Card>
+</Window>
