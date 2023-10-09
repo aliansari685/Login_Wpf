@@ -35,7 +35,7 @@ Forms:
 
 ![1](https://github.com/aliansari685/Login_Wpf/assets/37542697/5712e1b0-37c3-4fe5-80fa-53ec18709f59)
 
-![2](https://github.com/aliansari685/Login_Wpf/assets/37542697/c588097d-5430-40e5-8eb7-7bc0e68ab033)
+![2](https://github.com/aliansari685/Login_Wpf/assets/37542697/66e6fc97-4219-4baa-bce8-36ba85c56d1a)
 
 ![3](https://github.com/aliansari685/Login_Wpf/assets/37542697/ad9be306-4cfb-4a95-b7a4-e608605e4190)
 
