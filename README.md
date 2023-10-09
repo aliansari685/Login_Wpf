@@ -35,8 +35,6 @@ Forms:
 
 ![1](https://github.com/aliansari685/Login_Wpf/assets/37542697/5712e1b0-37c3-4fe5-80fa-53ec18709f59)
 
-![2](https://github.com/aliansari685/Login_Wpf/assets/37542697/66e6fc97-4219-4baa-bce8-36ba85c56d1a)
-
 ![3](https://github.com/aliansari685/Login_Wpf/assets/37542697/ad9be306-4cfb-4a95-b7a4-e608605e4190)
 
 ![4](https://github.com/aliansari685/Login_Wpf/assets/37542697/1734144f-bd50-4ab4-b15f-497140cbf6c5)
@@ -50,6 +48,8 @@ Forms:
 ![8](https://github.com/aliansari685/Login_Wpf/assets/37542697/51ed6f5e-2ad3-4c2d-9c21-2a8f14f55807)
 
 ![9](https://github.com/aliansari685/Login_Wpf/assets/37542697/bd985c5e-a8fa-4097-9877-6e055fcf4de1)
+
+![2](https://github.com/aliansari685/Login_Wpf/assets/37542697/66e6fc97-4219-4baa-bce8-36ba85c56d1a)
 
 ![10](https://github.com/aliansari685/Login_Wpf/assets/37542697/07b6ae06-bf1b-4439-b443-b236f7d600be)
 
