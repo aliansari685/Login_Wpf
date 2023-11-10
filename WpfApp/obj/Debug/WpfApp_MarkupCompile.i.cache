@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Projects\Wpf\WpfApp_Login_EF\WpfApp\obj\Debug\
+D:\Projects\Wpf\WpfApp_Login_EF_CleanCode\WpfApp\obj\Debug\
 WpfApp
 none
 false
 DEBUG;TRACE
-D:\Projects\Wpf\WpfApp_Login_EF\WpfApp\App.xaml
-4-1103506462
+D:\Projects\Wpf\WpfApp_Login_EF_CleanCode\WpfApp\App.xaml
+4-1011581074
 21573726809
-17-1382069474
-281505725625
-Forms\frm2.xaml;Forms\frm1.xaml;Forms\frm3.xaml;Forms\frm4.xaml;
+191904726596
+28-669783718
+View\frm2.xaml;View\frm1.xaml;View\frm3.xaml;View\frm4.xaml;
 
-True
+False
 

@@ -91,17 +91,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Classes\Checkup.cs" />
-    <Compile Include="Classes\Database.cs" />
-    <Compile Include="Classes\Operation.cs" />
-    <Compile Include="Classes\View.cs" />
-    <Compile Include="Forms\frm2.xaml.cs">
+    <Compile Include="Helper\Helper_Text.cs" />
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Model\Operation.cs" />
+    <Compile Include="Helper\Helper_ShowMessage.cs" />
+    <Compile Include="Model\DataBase.cs" />
+    <Compile Include="Model\Change.cs" />
+    <Compile Include="View\frm2.xaml.cs">
       <DependentUpon>frm2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm3.xaml.cs">
+    <Compile Include="View\frm3.xaml.cs">
       <DependentUpon>frm3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm4.xaml.cs">
+    <Compile Include="View\frm4.xaml.cs">
       <DependentUpon>frm4.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\LoginModel.cs">
@@ -124,7 +126,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm1.xaml.cs">
+    <Compile Include="View\frm1.xaml.cs">
       <DependentUpon>frm1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -161,19 +163,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Forms\frm2.xaml">
+    <Page Include="View\frm2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\frm1.xaml">
+    <Page Include="View\frm1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\frm3.xaml">
+    <Page Include="View\frm3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\frm4.xaml">
+    <Page Include="View\frm4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
